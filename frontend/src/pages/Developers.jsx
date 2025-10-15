@@ -4,12 +4,9 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import aivis from "../assets/ai-assistant.png";
 import RecalloVisual3D from "../components/RecalloVisual3D";
 import AboutSection from "../components/AboutSection";
-import recalloLogo from "../assets/recallo.png";
 import cta from "../assets/recall_cta.webp";
-import sir from "../assets/NLH_sir.webp";
 import galib from "../assets/galib.webp";
 import ziad from "../assets/ziad.webp";
 import faruq from "../assets/faruq.webp";
@@ -43,41 +40,6 @@ const Developers = () => {
         </div>
       </div>
 
-      {/* sir section */}
-      <div className="container pc">
-        <div className="row align-items-center g-5 pb-5">
-          <div className="col-md-6 about_section p-0">
-            <img
-              src={recalloLogo}
-              alt="recallo_logo"
-              className="img-fluid logo mb-4"
-            />
-            <h2>
-              {" "}
-              Course Instructor: Mr. Nabil Bin Hannan <b>(NLH)</b>
-            </h2>
-            <h4 className="text-white ovr mt-3 mb-4">
-              Course: CSE299 Junior Design <br />
-              Section: 14 <br />
-              Email:{" "}
-              <a href="mailto:nabil.hannan@northsouth.edu">
-                <span className="grad_text">nabil.hannan@northsouth.edu</span>
-              </a>
-            </h4>
-            <h4 className="dv">
-              A special thanks to our respected course instructor for the
-              continuous support, valuable feedback, and motivation throughout
-              the development of Recallo. Your guidance shaped our vision and
-              inspired us to create something meaningful. This project wouldn’t
-              be possible without your encouragement.
-            </h4>
-          </div>
-          <div className="col-md-6">
-            <img src={sir} alt="recallo_logo" className="img-fluid rbc" />
-          </div>
-        </div>
-      </div>
-
       {/* developer */}
       <div className="container pc">
         <div className="row align-items-center g-5 pb-5">
@@ -100,8 +62,8 @@ const Developers = () => {
                   </span>
                 </a>
               </p>
-              <p>ID: 2231985642</p>
-              <button
+              {/* <p>ID: 2231985642</p> */}
+              {/* <button
                 className="btn btn-sm btn-outline w-100 p-0 d-flex justify-content-between align-items-center text-white mt-2"
                 onClick={() => toggleExpand("ziad")}
               >
@@ -129,7 +91,7 @@ const Developers = () => {
                   <li>Flashcard Generation Backend Logic</li>
                   <li>Instant Email Notification After Exam</li>
                 </ul>
-              )}
+              )} */}
             </div>
           </div>
 
@@ -144,8 +106,8 @@ const Developers = () => {
                   <span className="grad_text">abdur.galib@northsouth.edu</span>
                 </a>
               </p>
-              <p>ID: 2231208642</p>
-              <button
+              {/* <p>ID: 2231208642</p> */}
+              {/* <button
                 className="btn btn-sm btn-outline w-100 p-0 d-flex justify-content-between align-items-center text-white mt-2"
                 onClick={() => toggleExpand("galib")}
               >
@@ -168,7 +130,7 @@ const Developers = () => {
                   <li>Sign-Up System</li>
                   <li>Initial Database</li>
                 </ul>
-              )}
+              )} */}
             </div>
           </div>
 
@@ -185,8 +147,8 @@ const Developers = () => {
                   </span>
                 </a>
               </p>
-              <p>ID: 2231568642</p>
-              <button
+              {/* <p>ID: 2231568642</p> */}
+              {/* <button
                 className="btn btn-sm btn-outline w-100 p-0 d-flex justify-content-between align-items-center text-white mt-2"
                 onClick={() => toggleExpand("omor")}
               >
@@ -211,7 +173,7 @@ const Developers = () => {
                   <li>Graphical Analysis for Study Metrics and Progress</li>
                   <li>Progress Page with Detailed Answer Analysis</li>
                 </ul>
-              )}
+              )} */}
             </div>
           </div>
         </div>
