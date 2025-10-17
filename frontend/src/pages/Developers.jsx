@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
@@ -12,15 +12,15 @@ import ziad from "../assets/ziad.webp";
 import faruq from "../assets/faruq.webp";
 
 const Developers = () => {
-  const [expanded, setExpanded] = useState({
-    ziad: false,
-    galib: false,
-    omor: false,
-  });
+  // const [expanded, setExpanded] = useState({
+  //   ziad: false,
+  //   galib: false,
+  //   omor: false,
+  // });
 
-  const toggleExpand = (key) => {
-    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
+  // const toggleExpand = (key) => {
+  //   setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
+  // };
   return (
     <div className="home-container">
       <Header />

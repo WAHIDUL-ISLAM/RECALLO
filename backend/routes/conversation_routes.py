@@ -125,7 +125,7 @@ def get_chat_logs(conv_id):
     supabase = current_app.config['supabase']
     
     try:
-        uuid.UUID(conv_id)
+        uuid.UUID(conv_id)  # Validate UUID format
         logs = supabase.table("chat_logs").select(
             "user_message, response_message, created_at"
         ).eq("conversation_id", conv_id).order("created_at").execute()

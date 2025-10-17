@@ -8,16 +8,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from datetime import datetime
-from langchain_groq import ChatGroq
 import random
-
 
 # Initialize Supabase client
 load_dotenv()
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "https://bhrwvazkvsebdxstdcow.supabase.co/")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-GROQ_API_KEY= os.getenv("GROQ_API_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Generate UUID helper
@@ -78,15 +75,6 @@ def get_llm_chain(gemini_api_key: str):
         model="gemini-2.5-flash",
         google_api_key=gemini_api_key,
         temperature=0.3
-    )
-    return LLMChain(llm=llm, prompt=prompt_template)
-
-
-def get_groq_chain(groq_api_key: str):
-    llm= ChatGroq(
-        model="gemma2-9b-it", 
-        api_key=groq_api_key,      
-        temperature=0.3,
     )
     return LLMChain(llm=llm, prompt=prompt_template)
 
@@ -214,10 +202,9 @@ def generate_and_save_mcqs(topic_id: str, gemini_api_key: str, difficulty_mode: 
 
         # --- Prepare LLM input ---
         mistake_count = len(mistake_questions)
-        num_to_generate = 10 - mistake_count 
+        num_to_generate = 10 - mistake_count
 
-        # chain = get_llm_chain(gemini_api_key)
-        chain = get_groq_chain(GROQ_API_KEY)
+        chain = get_llm_chain(gemini_api_key)
         llm_response = chain.run(content=merged_content, difficulty=difficulty_mode, num_questions=num_to_generate)
 
         # --- Parse generated questions ---

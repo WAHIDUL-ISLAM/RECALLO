@@ -11,8 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
 .venv
-**/.env
+/frontend/.env
+/backend/.env
+/ai-engine/.venv
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +27,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+**/__pycache__/
+*.pyc
+
