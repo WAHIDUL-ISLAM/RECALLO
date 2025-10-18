@@ -51,17 +51,14 @@ GROQ_API_KEY==your_groq_api_key
 ```
 
 ## 💻 How to Run the Application
-1. Start the frontend
+1. API keys
+```python
+copy the frontend and backend API key from the env_files.txt and paste them into the correct place.
+```
+2. Start the frontend
 ```python
 cd frontend
 npm run dev
-```
-2. Activate the Virtual Environment (for AI Engine)
-```python
-cd ai-engine
-.venv\Scripts\activate  # Windows
-# Or
-source .venv/bin/activate  # macOS/Linux
 ```
 3.  Run the Backend Server
 ```python
